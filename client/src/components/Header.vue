@@ -76,7 +76,8 @@ export default {
         name: 'login'
       })
     },
-    recentlyViewed () {
+    async recentlyViewed () {
+      await new Promise(resolve => setTimeout(resolve, 2000))
       this.$router.push({
         name: 'recentlyViewed'
       })

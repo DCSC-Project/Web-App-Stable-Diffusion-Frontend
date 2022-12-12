@@ -18,7 +18,8 @@ import _ from 'lodash'
 
 export default {
   methods: {
-    generate () {
+    async generate () {
+      await new Promise(resolve => setTimeout(resolve, 20000))
       this.$router.push({
         name: 'generate'})
     }
