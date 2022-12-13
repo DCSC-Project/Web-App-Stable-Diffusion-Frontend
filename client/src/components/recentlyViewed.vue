@@ -16,7 +16,7 @@ import { saveAs } from 'file-saver'
 export default {
   data () {
     return {
-      images: ['']
+      images: []
     }
   },
   mounted () {

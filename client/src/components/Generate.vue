@@ -16,7 +16,7 @@ import { saveAs } from 'file-saver'
 export default {
   data () {
     return {
-      images: ['https://i.ibb.co/kBLmBHk/0000020221211-225126.png']
+      images: []
     }
   },
   mounted () {
@@ -26,7 +26,7 @@ export default {
     async demo () {
       let tempImages = []
       try {
-        axios.get("http://34.85.205.24:5000//store?user_id=akhil.test@gmail.com&caption='A man riding a horse on moon'", {responseType: 'blob'}).then(function (response) {
+        axios.get("http://34.85.205.23:5000//store?user_id=akhil.test@gmail.com&caption='A man riding a horse on moon'", {responseType: 'blob'}).then(function (response) {
           console.log(response)
           const zip = new JSZip()
           zip.loadAsync(response.data, {blob: true}).then(function (zip) {

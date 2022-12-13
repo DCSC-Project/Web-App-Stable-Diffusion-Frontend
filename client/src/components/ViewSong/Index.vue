@@ -24,9 +24,6 @@
 
 <script>
 import {mapState} from 'vuex'
-import SongMetadata from './SongMetadata'
-import SongsService from '@/services/SongsService'
-import SongHistoryService from '@/services/SongHistoryService'
 
 export default {
   data () {
@@ -42,17 +39,7 @@ export default {
     ])
   },
   async mounted () {
-    const songId = this.route.params.songId
-    this.song = (await SongsService.show(songId)).data
-
-    if (this.isUserLoggedIn) {
-      SongHistoryService.post({
-        songId: songId
-      })
-    }
-  },
-  components: {
-    SongMetadata
+    console.log('working')
   }
 }
 </script>
